@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background:#1b1d21;
+        }
+        .card {
+            width:300px;
+            height:340px;
+            background:#2C3035;
+            border-radius:4px;
+            box-shadow: 0px 0px 30px rgba(0,0,0,.5);
+            overflow: hidden;
+            position:relative;
+        }
+        .card .thumbnail {
+            height:145px;
+            width:100%;
+            background-position: center center;
+            background-size:cover;
+        }
+
+        .card .card_content {
+            padding:15px;
+            color:#89898B;
+        }
+
+        .card .card_content h1 {
+            padding:0; margin:0;
+            color:#B6B7B8;
+            font-size:18px;
+        }
+        .card .card_content p {
+            margin:0;
+            padding-top:5px;
+
+        }
+        .card .card_content small {
+            display:block;
+            margin-top:30px;
+        }
+        .card .card_footer {
+            width:100%;
+            height:45px;
+            position:absolute;
+            bottom:0;
+            border-top:1px solid #89898B;
+            color:#89898B;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size:12px;
+        }
+        .card .card_footer .icon_info {display:flex; align-items: center; padding-left:10px;}
+        .card .card_footer .icon_info .icon {width:20px; height:20px; margin-right:5px;}
+        .card .card_footer .card_control {display:flex; flex-direction: row; }
+        .card .card_footer .card_control img { width:15px; height:15px; margin-right:10px;}
+        .notice {width:300px;}
+        .notice header {display:flex; width:100%; align-items: center; justify-content: space-between;}
+        .notice header h1 {color:#E5E6E7;padding:0; font-size:24px;}
+        .notice header .notification {
+            background:#2C3035;
+            color:#89898B;
+            width:25px;
+            height:25px;
+            text-align:center;
+            line-height:25px;
+            border-radius:15px;
+            font-weight: bold;
+        }
+
+        .notice .notice_content {}
+        .notice .notice_content .item {
+            height:75px;
+            width:100%;
+            background:#2C3035;
+            border-radius:4px;
+            margin:10px 0;
+            display:flex;
+            align-items: center;
+            position:relative;
+        }
+        .notice .notice_content .item .icon {
+            width: 45px;
+            height: 45px;
+            margin-left: 15px;
+        }
+
+        .notice .notice_content .item .item_content { margin-left:15px;}
+        .notice .notice_content .item .item_content * {color:#E5E6E7; padding:0; margin:3px 0;}
+        .notice .notice_content .item .item_content h1 {font-size:13px;}
+        .notice .notice_content .item .item_content h2 {font-size:11px;}
+        .notice .notice_content .item .item_content p {font-size:9px; color:#89898B;}
+        .notice .notice_content .item .app_notification {
+            width:10px;
+            height:10px;
+            border-width: 3px;
+            border-color:#2C3035;
+            border-style: solid;
+            border-radius: 10px;
+            background: #d92626;
+            position:absolute;
+            left:10px;
+            top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="thumbnail"
+            style="background-image:url('images/shelley-pauls-I58f47LRQYM-unsplash.jpg');">
+        </div>
+        <div class="card_content">
+            <h1>사과 팝니다</h1>
+            <p>시계는 와치 사과는 애플</p>
+            <small>Apple</small>
+        </div>
+        <footer class="card_footer">
+            <div class="icon_info">
+                <img src="images/app.svg" class="icon" alt="">
+                <div>T Times</div>
+            </div>
+            <div class="card_control">
+                <img src="images/bookmark.svg" alt="">
+                <img src="images/more.svg" alt="">
+            </div>
+        </footer>
+    </div>
+
+    <div class="notice">
+        <header>
+            <h1>😉 윙크 모집 공고</h1>
+            <div class="notification">3</div>
+        </header>
+        <div class="notice_content">
+            <div class="item">
+                <div class="app_notification"></div>
+                <img src="images/app.svg" class="icon" alt="">
+                <div class="item_content">
+                    <h1>앱스토어</h1>
+                    <h2>까꿍까꿍까꿍까꿍</h2>
+                    <p>까꿍까꿍까꿍까꿍까꿍까꿍까</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="app_notification"></div>
+                <img src="images/app.svg" class="icon" alt="">
+                <div class="item_content">
+                    <h1>앱스토어</h1>
+                    <h2>까꿍까꿍까꿍까꿍</h2>
+                    <p>까꿍까꿍까꿍까꿍까꿍까꿍까</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/app.svg" class="icon" alt="">
+                <div class="item_content">
+                    <h1>앱스토어</h1>
+                    <h2>까꿍까꿍까꿍까꿍</h2>
+                    <p>까꿍까꿍까꿍까꿍까꿍까꿍까</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
