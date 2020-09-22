@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.addEventListener("load", async function(){
+            // document.querySelector("div");
+
+            const responseData = await fetch("http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=36026f62b77501fd7383557fae1c40e4");
+            const weatherData = await responseData.json();
+
+            const temp = weatherData.main.temp - 273.15;
+            const weather = weatherData.weather[0].main;
+
+            console.log(temp, weather);
+
+            document.querySelector(".temp").innerHTML = temp;
+
+            switch (weather)
+            {
+                case "Clear":
+
+                    break;
+                case "Cloud":
+
+                    break;
+                case "Rain":
+
+                    break;
+
+            }
+            document.querySelector(".weather").innerHTML = weather;
+
+
+        });
+    </script>
+</head>
+<body>
+
+<div class="temp">
+
+</div>
+
+<div class="weather">
+
+</div>
+
+</body>
+</html>
