@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div>
+        <table>
+            <tr>
+                <th>이름</th> <th>내용</th> <th>날짜</th>
+            </tr>
+            <tbody id="post_content">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+
+        // var newPostKey = firebase.database().ref().child('posts').push().key;
+        //
+        // var postData = {
+        //     brdno: newPostKey,
+        //     brdwriter:"홍길동",
+        //     brdtitle:"게시판 제목",
+        //     brdmemo:"게시물 내용",
+        //     brddate: Date.now()
+        // };
+        //
+        // var updates = {};
+        // updates['/board/' + newPostKey] = postData;
+        //
+        // firebase.database().ref().update(updates);
+        //
+        //
+        // function readData(){
+        //     return firebase.database().ref('/board/')..then(function(snapshot) {
+        //         var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+        //         // ...
+        //     });
+        // }
+
+    </script>
+</body>
+</html>

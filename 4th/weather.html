@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        async function getWeather(){
+            return await (await fetch('http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=')).json();
+        }
+
+
+        window.addEventListener('load', async function(){
+            const weatherResponse = await getWeather();
+            console.log(weatherResponse.weather[0].main);
+            console.log("온도", weatherResponse.main.temp - 273.15);
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <div></div>
+
+</body>
+</html>
