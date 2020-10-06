@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .category_modal {
+            display:none;
+            position:fixed;
+            top:0;left:0;right:0;bottom:0;
+            background:rgba(0,0,0,.5);
+        }
+        .modal_content {
+            position:absolute; top:50%; left:50%;
+            margin-left:-150px;
+            margin-top:-150px;
+            background:white;
+            width:300px;
+            height:300px;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="modalCtrl('category', true)">카테고리 등록</button>
+
+<div class="category_modal">
+    <div class="modal_content">
+        <button onclick="modalCtrl('category', false)">닫기</button>
+        <input type="text">
+        <button>등록</button>
+    </div>
+</div>
+
+<script>
+    let categoryModal = document.querySelector(".category_modal");
+    function modalCtrl(modalName, show){
+        switch (modalName)
+        {
+            case "category":
+                categoryModal.style.display= show ? 'block' : 'none';
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>
